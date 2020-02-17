@@ -21,7 +21,7 @@ let G5r = { value: 5, color: "green" };
 let G5b = { value: 5, color: "green" };
 let number_tile = [R0, R1, R2, R3, R4, G5r, R6, R7, R8, R9, B0, B1, B2, B3, B4, G5b, B6, B7, B8, B9];
 let question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
-let ans;
+let ans = [];
 
 // 手札の配布
 function distribution() {
@@ -39,25 +39,28 @@ function displayQuestion() {
     console.log(question[random]);
 }
 
-// 正誤判定
-function answer() {
+function compareFunc(a, b) {
+
+}
+
+
+// 解答の取得、正誤判定
+function answerJudgment() {
+    let flag = false;
+    for (let i = 0; i < document.answer_box.answer.length; i++) {
+        if (document.answer_box.answer[i].checked) {
+            flag = true;
+            ans.push(document.answer_box.answer[i].value);
+        }
+    }
+    ans.sort();
+    alert(ans);
+
     // if () {
     //     alert("勝利！");
     // } else {
     //     alert("不正解");
     // }
-}
-
-// 解答の取得
-function onButtonClick() {
-    let flag = false;
-    for (let i = 0; i < document.answer_box.answer.length; i++) {
-        if (document.answer_box.answer[i].checked) {
-            flag = true;
-            ans = document.answer_box.answer[i].value;
-            console.log(ans);
-        }
-    }
 }
 console.log(R1.color, R1.value);
 displayQuestion();
