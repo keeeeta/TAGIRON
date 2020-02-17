@@ -26,17 +26,20 @@ let ans = [];
 // 手札の配布
 function distribution() {
     let tmp = [];
-    for (let i = 0; i < 5; i++) {
-        let random = Math.floor(Math.random() * number_tile.length);
-        tmp[i] = number_tile[random];
-    }
+    do {
+        for (let i = 0; i < 5; i++) {
+            let rndNum = Math.floor(Math.random() * number_tile.length);
+            tmp[i] = number_tile[rndNum];
+        }
+        tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
+    } while (tmp.length !== 5);
     console.log(tmp);
 }
 
 // 質問の表示
 function displayQuestion() {
-    let random = Math.floor(Math.random() * question.length);
-    console.log(question[random]);
+    let rndNum = Math.floor(Math.random() * question.length);
+    console.log(question[rndNum]);
 }
 
 function compareFunc(a, b) {
@@ -62,6 +65,6 @@ function answerJudgment() {
     //     alert("不正解");
     // }
 }
-console.log(R1.color, R1.value);
+
 displayQuestion();
 distribution();
