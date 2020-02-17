@@ -34,6 +34,71 @@ function distribution() {
         tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
     } while (tmp.length !== 5);
     console.log(tmp);
+
+    for (let i = 0; i < tmp.length; i++) {
+        switch (tmp[i]) {
+            case R0:
+                document.write("<img src='./R0.jpg' alt='R0'></img>");
+                break;
+            case R1:
+                document.write("<img src='./R1.jpg' alt='R1'></img>");
+                break;
+            case R2:
+                document.write("<img src='./R2.jpg' alt='R2'></img>");
+                break;
+            case R3:
+                document.write("<img src='./R3.jpg' alt='R3'></img>");
+                break;
+            case R4:
+                document.write("<img src='./R4.jpg' alt='R4'></img>");
+                break;
+            case R6:
+                document.write("<img src='./R6.jpg' alt='R6'></img>");
+                break;
+            case R7:
+                document.write("<img src='./R7.jpg' alt='R7'></img>");
+                break;
+            case R8:
+                document.write("<img src='./R8.jpg' alt='R8'></img>");
+                break;
+            case R9:
+                document.write("<img src='./R9.jpg' alt='R9'></img>");
+                break;
+            case B0:
+                document.write("<img src='./B0.jpg' alt='B0'></img>");
+                break;
+            case B1:
+                document.write("<img src='./B1.jpg' alt='B1'></img>");
+                break;
+            case B2:
+                document.write("<img src='./B2.jpg' alt='B2'></img>");
+                break;
+            case B3:
+                document.write("<img src='./B3.jpg' alt='B3'></img>");
+                break;
+            case B4:
+                document.write("<img src='./B4.jpg' alt='B4'></img>");
+                break;
+            case B6:
+                document.write("<img src='./B6.jpg' alt='B6'></img>");
+                break;
+            case B7:
+                document.write("<img src='./B7.jpg' alt='B7'></img>");
+                break;
+            case B8:
+                document.write("<img src='./B8.jpg' alt='B8'></img>");
+                break;
+            case B9:
+                document.write("<img src='./B9.jpg' alt='B9'></img>");
+                break;
+            case G5:
+                document.write("<img src='./G5.jpg' alt='G5'></img>");
+                break;
+            default:
+                break;
+        }
+
+    }
 }
 
 // 質問の表示
