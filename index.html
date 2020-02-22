@@ -8,20 +8,63 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <script src="./tagiron.js"></script>
 </head>
 
 <body>
-  秋藤参上!!
-　<!--[秋藤編集!!]-->
+
+<!--[秋藤参上!!]-->
+
+<div class="header">
+  <div class="container">
+    <div class="header-left">
+      TAGIRON
+    </div>
+    <div class="header-right">
+
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<!--メイン-->
+<div class="mainVisual">
   <div class="container">
     <div class="row">
-      <div class="col-md-9"></div>
-      <div class="col-md-3"></div>
+      <div class="col-md-9">
+
+        <div id="myTurn">
+          あなたの番です</div>
+
+        <div id="displayQuestionBox">
+          質問を選択
+          <div class="questionCard">質問1</div>
+          <div class="questionCard">質問2</div>
+          <div class="questionCard">質問3</div>
+        </div>
+
+        <div id="myHand">
+          手札
+          <img class="numberTile">手札1</img>
+          <img class="numberTile">手札2</img>
+          <img class="numberTile">手札3</img>
+          <img class="numberTile">手札4</img>
+          <img class="numberTile">手札5</img>
+        </div>
+
+      </div>
+
+      <div class="col-md-3">
+        ログ
+        <div class="col-md-3Inner"></div>
+
+      </div>
     </div>
   </div>
+</div>
 
-
+<!--[秋藤退場!!]-->
 
     <form name="answer_box">
         <p>正しいと思う答えを5つ選んでください</p>

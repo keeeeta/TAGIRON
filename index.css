@@ -1,0 +1,69 @@
+@charset "utf_8";
+
+/*body*/
+.mainVisual{
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background-image: url("");
+  background-size: cover;
+  color: #87cefa;
+  text-align: center;
+}
+.row{
+  /*フォント*/
+  padding: 90px 0 60px;
+  color: #5a5c5f;
+
+  /*横並び*/
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-md-9{
+  width: 66%;
+  margin-top: 35px;
+}
+.col-md-3{
+  width: 33%;
+  margin-top: 35px;
+}
+.myTurn{
+  pdding: 25px 30px;
+  background-color: #000000;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin: 0 20px;
+}
+.displayQuestionBox{
+  pdding: 25px 30px;
+  background-color: #000000;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin: 0 20px;
+}
+.myHand{
+  pdding: 25px 30px;
+  background-color: #000000;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin: 0 20px;
+}
+.col-md-3Inner{
+  pdding: 25px 30px;
+  background-color: #000000;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin: 0 20px;
+}
+.myTurn{
+  font-size: 14px;
+}
+.questionCard{
+  font-size: 14px;
+}
+.numberTile{
+  font-size: 14px;
+}
