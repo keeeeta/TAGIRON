@@ -45,101 +45,121 @@ function handOutCard() {
             case R0:
                 let imgR0 = new Image();
                 imgR0.src = './img/R0.jpg';
+                imgR0.classList.add("numberTile");
                 myHand.appendChild(imgR0);
                 break;
             case R1:
                 let imgR1 = new Image();
                 imgR1.src = './img/R1.jpg';
+                imgR1.classList.add("numberTile");
                 myHand.appendChild(imgR1);
                 break;
             case R2:
                 let imgR2 = new Image();
                 imgR2.src = './img/R2.jpg';
+                imgR2.classList.add("numberTile");
                 myHand.appendChild(imgR2);
                 break;
             case R3:
                 let imgR3 = new Image();
                 imgR3.src = './img/R3.jpg';
+                imgR3.classList.add("numberTile");
                 myHand.appendChild(imgR3);
                 break;
             case R4:
                 let imgR4 = new Image();
                 imgR4.src = './img/R4.jpg';
+                imgR4.classList.add("numberTile");
                 myHand.appendChild(imgR4);
                 break;
             case R6:
                 let imgR6 = new Image();
                 imgR6.src = './img/R6.jpg';
+                imgR6.classList.add("numberTile");
                 myHand.appendChild(imgR6);
                 break;
             case R7:
                 let imgR7 = new Image();
                 imgR7.src = './img/R7.jpg';
+                imgr7.classList.add("numberTile");
                 myHand.appendChild(imgR7);
                 break;
             case R8:
                 let imgR8 = new Image();
                 imgR8.src = './img/R8.jpg';
+                imgR8.classList.add("numberTile");
                 myHand.appendChild(imgR8);
                 break;
             case R9:
                 let imgR9 = new Image();
                 imgR9.src = './img/R9.jpg';
+                imgR9.classList.add("numberTile");
                 myHand.appendChild(imgR9);
                 break;
             case B0:
                 let imgB0 = new Image();
                 imgB0.src = './img/B0.jpg';
+                imgB0.classList.add("numberTile");
                 myHand.appendChild(imgB0);
                 break;
             case B1:
                 let imgB1 = new Image();
                 imgB1.src = './img/B1.jpg';
+                imgB1.classList.add("numberTile");
                 myHand.appendChild(imgB1);
                 break;
             case B2:
                 let imgB2 = new Image();
                 imgB2.src = './img/B2.jpg';
+                imgB3.classList.add("numberTile");
                 myHand.appendChild(imgB2);
                 break;
             case B3:
                 let imgB3 = new Image();
                 imgB3.src = './img/B3.jpg';
+                imgB4.classList.add("numberTile");
                 myHand.appendChild(imgB3);
                 break;
             case B4:
                 let imgB4 = new Image();
                 imgB4.src = './img/B4.jpg';
+                imgB4.classList.add("numberTile");
                 myHand.appendChild(imgB4);
                 break;
             case B6:
                 let imgB6 = new Image();
                 imgB6.src = './img/B6.jpg';
+                imgB6.classList.add("numberTile");
                 myHand.appendChild(imgB6);
                 break;
             case B7:
                 let imgB7 = new Image();
                 imgB7.src = './img/B7.jpg';
+                imgB7.classList.add("numberTile");
                 myHand.appendChild(imgB7);
                 break;
             case B8:
                 let imgB8 = new Image();
                 imgB8.src = './img/B8.jpg';
+                imgB8.classList.add("numberTile");
                 myHand.appendChild(imgB8);
                 break;
             case B9:
                 let imgB9 = new Image();
                 imgB9.src = './img/B9.jpg';
+                imgB9.classList.add("numberTile");
                 myHand.appendChild(imgB9);
                 break;
             case G5r:
                 let imgG5r = new Image();
                 imgG5r.src = './img/G5.jpg';
+                imgG5r.classList.add("numberTile");
                 myHand.appendChild(imgG5r);
                 break;
             case G5b:
                 let imgG5b = new Image();
                 imgG5b.src = './img/G5.jpg';
+                imgg5b.classList.add("numberTile");
                 myHand.appendChild(imgG5b);
                 break;
             default:
