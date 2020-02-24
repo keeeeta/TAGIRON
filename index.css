@@ -27,7 +27,7 @@
   margin-top: 35px;
 }
 .myTurn{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
@@ -35,7 +35,7 @@
   margin: 0 20px;
 }
 .displayQuestionBox{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
@@ -43,7 +43,7 @@
   margin: 0 20px;
 }
 .myHand{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
@@ -51,7 +51,7 @@
   margin: 0 20px;
 }
 .col-md-3Inner{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
