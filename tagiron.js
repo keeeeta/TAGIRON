@@ -19,16 +19,16 @@ const B8 = { value: 8, color: "blue" };
 const B9 = { value: 9, color: "blue" };
 const G5r = { value: 5, color: "green" };
 const G5b = { value: 5, color: "green" };
-const numberTileList = [R0, R1, R2, R3, R4, G5r, R6, R7, R8, R9, B0, B1, B2, B3, B4, G5b, B6, B7, B8, B9];
+const numberTileList = [R0, B0, R1, B1, R2, B2, R3, B3, R4, B4, G5r, G5b, R6, B6, R7, B7, R8, B8, R9, B9];
 const question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
 let ans = []; //回答格納
 const displayQuestionBox = document.getElementById('displayQuestionBox');
 const myHand = document.getElementById('myHand');
-// const img = new Image();
 
 // 手札の配布
 function handOutCard() {
     let tmp = [];
+    let hand = [];
 
     //重複ない5枚の確定
     do {
@@ -36,12 +36,22 @@ function handOutCard() {
             let rndNum = Math.floor(Math.random() * numberTileList.length);
             tmp[i] = numberTileList[rndNum];
         }
+        // 重複の削除
         tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
     } while (tmp.length !== 5);
+    console.log(tmp);
+
+    //並べ替え
+    for (let m = 0; m < numberTileList.length; m++) {
+        if (tmp.some((value) => { return value === numberTileList[m] })) {
+            hand.push(numberTileList[m]);
+        }
+    }
+    console.log(hand);
 
     // 手札の表示
-    for (let i = 0; i < tmp.length; i++) {
-        switch (tmp[i]) {
+    for (let i = 0; i < hand.length; i++) {
+        switch (hand[i]) {
             case R0:
                 let imgR0 = new Image();
                 imgR0.src = './img/R0.jpg';
@@ -111,7 +121,7 @@ function handOutCard() {
             case B2:
                 let imgB2 = new Image();
                 imgB2.src = './img/B2.jpg';
-                imgB3.classList.add("numberTile");
+                imgB2.classList.add("numberTile");
                 myHand.appendChild(imgB2);
                 break;
             case B3:
@@ -159,7 +169,7 @@ function handOutCard() {
             case G5b:
                 let imgG5b = new Image();
                 imgG5b.src = './img/G5.jpg';
-                imgg5b.classList.add("numberTile");
+                imgG5b.classList.add("numberTile");
                 myHand.appendChild(imgG5b);
                 break;
             default:
