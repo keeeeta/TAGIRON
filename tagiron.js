@@ -19,26 +19,31 @@ let B8 = { value: 8, color: "blue" };
 let B9 = { value: 9, color: "blue" };
 let G5r = { value: 5, color: "green" };
 let G5b = { value: 5, color: "green" };
-let number_tile = [R0, R1, R2, R3, R4, G5r, R6, R7, R8, R9, B0, B1, B2, B3, B4, G5b, B6, B7, B8, B9];
+let numberTileList = [R0, R1, R2, R3, R4, G5r, R6, R7, R8, R9, B0, B1, B2, B3, B4, G5b, B6, B7, B8, B9];
 let question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
 let ans = [];
 
 // 手札の配布
-function distribution() {
+function handOutCard() {
     let tmp = [];
+    let displayHnad = document.getElementById("myHand");
+
+    //重複ない5枚の確定
     do {
         for (let i = 0; i < 5; i++) {
-            let rndNum = Math.floor(Math.random() * number_tile.length);
-            tmp[i] = number_tile[rndNum];
+            let rndNum = Math.floor(Math.random() * numberTileList.length);
+            tmp[i] = numberTileList[rndNum];
         }
         tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
     } while (tmp.length !== 5);
     console.log(tmp);
 
+    // 手札の表示
     for (let i = 0; i < tmp.length; i++) {
         switch (tmp[i]) {
             case R0:
                 document.write("<img src='./R0.jpg' alt='R0'></img>");
+                // displayHnad.innerHTML = "<img src='./R0.jpg' alt='R0'></img>";
                 break;
             case R1:
                 document.write("<img src='./R1.jpg' alt='R1'></img>");
@@ -104,7 +109,8 @@ function distribution() {
 // 質問の表示
 function displayQuestion() {
     let rndNum = Math.floor(Math.random() * question.length);
-    console.log(question[rndNum]);
+    console.log(String());
+    document.getElementById('questionCard').textContent = question[rndNum];
 }
 
 function compareFunc(a, b) {
@@ -131,5 +137,6 @@ function answerJudgment() {
     // }
 }
 
+// window.onload = function () { displayQuestion() };
 displayQuestion();
-distribution();
+handOutCard();
