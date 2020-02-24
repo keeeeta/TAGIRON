@@ -2,93 +2,87 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <script src="./tagiron.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-<!--[秋藤参上!!]-->
+  <!--[秋藤参上!!]-->
 
-<div class="header">
-  <div class="container">
-    <div class="header-left">
-      TAGIRON
-    </div>
-    <div class="header-right">
-
-    </div>
-    <div class="clear"></div>
-  </div>
-</div>
-
-<!--メイン-->
-<div class="mainVisual">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-
-        <div id="myTurn">
-          あなたの番です</div>
-
-        <div id="displayQuestionBox">
-          質問を選択
-          <div class="questionCard">質問1</div>
-        </div>
-
-        <div id="myHand">
-          <!--手札-->
-          <img class="numberTile">手札1</img>
-          <img class="numberTile">手札2</img>
-          <img class="numberTile">手札3</img>
-          <img class="numberTile">手札4</img>
-          <img class="numberTile">手札5</img>
-        </div>
+  <div class="header">
+    <div class="container">
+      <div class="header-left">
+        TAGIRON
+      </div>
+      <div class="header-right">
 
       </div>
+      <div class="clear"></div>
+    </div>
+  </div>
 
-      <div class="col-md-3">
-        ログ
-        <div class="col-md-3Inner"></div>
+  <!--メイン-->
+  <div class="mainVisual">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
 
+          <div id="myTurn">
+            あなたの番です</div>
+
+          <div id="displayQuestionBox">
+            質問を選択
+            <div class="questionCard" id="questionCard">質問1</div>
+          </div>
+
+          <div id="myHand"></div>
+
+        </div>
+
+        <div class="col-md-3">
+          ログ
+          <div class="col-md-3Inner"></div>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!--[秋藤退場!!]-->
+  <!--[秋藤退場!!]-->
 
-    <form name="answer_box">
-        <p>正しいと思う答えを5つ選んでください</p>
-        <input type="checkbox" name="answer" value="R0">R0
-        <input type="checkbox" name="answer" value="R1">R1
-        <input type="checkbox" name="answer" value="R2">R2
-        <input type="checkbox" name="answer" value="R3">R3
-        <input type="checkbox" name="answer" value="R4">R4
-        <input type="checkbox" name="answer" value="G5">G5
-        <input type="checkbox" name="answer" value="R6">R6
-        <input type="checkbox" name="answer" value="R7">R7
-        <input type="checkbox" name="answer" value="R8">R8
-        <input type="checkbox" name="answer" value="R9">R9
-        <br>
-        <input type="checkbox" name="answer" value="B0">B0
-        <input type="checkbox" name="answer" value="B1">B1
-        <input type="checkbox" name="answer" value="B2">B2
-        <input type="checkbox" name="answer" value="B3">B3
-        <input type="checkbox" name="answer" value="B4">B4
-        <input type="checkbox" name="answer" value="G5">G5
-        <input type="checkbox" name="answer" value="B6">B6
-        <input type="checkbox" name="answer" value="B7">B7
-        <input type="checkbox" name="answer" value="B8">B8
-        <input type="checkbox" name="answer" value="B9">B9
-        <button type="submit" onclick="onButtonClick();"></button>
-    </form>
+  <form name="answer_box">
+    <p>正しいと思う答えを5つ選んでください</p>
+    <input type="checkbox" name="answer" value="R0">R0
+    <input type="checkbox" name="answer" value="R1">R1
+    <input type="checkbox" name="answer" value="R2">R2
+    <input type="checkbox" name="answer" value="R3">R3
+    <input type="checkbox" name="answer" value="R4">R4
+    <input type="checkbox" name="answer" value="G5">G5
+    <input type="checkbox" name="answer" value="R6">R6
+    <input type="checkbox" name="answer" value="R7">R7
+    <input type="checkbox" name="answer" value="R8">R8
+    <input type="checkbox" name="answer" value="R9">R9
+    <br>
+    <input type="checkbox" name="answer" value="B0">B0
+    <input type="checkbox" name="answer" value="B1">B1
+    <input type="checkbox" name="answer" value="B2">B2
+    <input type="checkbox" name="answer" value="B3">B3
+    <input type="checkbox" name="answer" value="B4">B4
+    <input type="checkbox" name="answer" value="G5">G5
+    <input type="checkbox" name="answer" value="B6">B6
+    <input type="checkbox" name="answer" value="B7">B7
+    <input type="checkbox" name="answer" value="B8">B8
+    <input type="checkbox" name="answer" value="B9">B9
+    <button type="submit" onclick="answerJudgment();"></button>
+  </form>
+
+  <script src="./tagiron.js" defer></script>
 </body>
 
 </html>
