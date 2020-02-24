@@ -21,12 +21,14 @@ const G5r = { value: 5, color: "green" };
 const G5b = { value: 5, color: "green" };
 const numberTileList = [R0, R1, R2, R3, R4, G5r, R6, R7, R8, R9, B0, B1, B2, B3, B4, G5b, B6, B7, B8, B9];
 const question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
-let ans = [];
+let ans = []; //回答格納
+const displayQuestionBox = document.getElementById('displayQuestionBox');
+const myHand = document.getElementById('myHand');
 
 // 手札の配布
 function handOutCard() {
     let tmp = [];
-    let displayHnad = document.getElementById("myHand");
+    let img = new Image();
 
     //重複ない5枚の確定
     do {
@@ -43,7 +45,6 @@ function handOutCard() {
         switch (tmp[i]) {
             case R0:
                 document.write("<img src='./img/R0.jpg' alt='R0'></img>");
-                // displayHnad.innerHTML = "<img src='./img/R0.jpg' alt='R0'></img>";
                 break;
             case R1:
                 document.write("<img src='./img/R1.jpg' alt='R1'></img>");
