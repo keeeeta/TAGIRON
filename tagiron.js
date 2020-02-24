@@ -152,7 +152,6 @@ function handOutCard() {
 // 質問の表示
 function displayQuestion() {
     let rndNum = Math.floor(Math.random() * question.length);
-    console.log(String());
     document.getElementById('questionCard').textContent = question[rndNum];
 }
 
@@ -182,4 +181,3 @@ function answerJudgment() {
 
 window.addEventListener('DOMContentLoaded', displayQuestion);
 window.addEventListener('load', handOutCard);
-// handOutCard();
