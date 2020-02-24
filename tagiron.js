@@ -81,7 +81,7 @@ function handOutCard() {
             case R7:
                 let imgR7 = new Image();
                 imgR7.src = './img/R7.jpg';
-                imgr7.classList.add("numberTile");
+                imgR7.classList.add("numberTile");
                 myHand.appendChild(imgR7);
                 break;
             case R8:
