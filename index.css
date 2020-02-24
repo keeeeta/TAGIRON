@@ -2,8 +2,8 @@
 
 /*body*/
 .mainVisual{
-  padding-top: 140px;
-  padding-bottom: 100px;
+  /* padding-top: 140px; */
+  /* padding-bottom: 100px; */
   background-image: url("");
   background-size: cover;
   color: #87cefa;
@@ -11,55 +11,61 @@
 }
 .row{
   /*フォント*/
-  padding: 90px 0 60px;
+  /* padding: 90px 0 60px; */
   color: #5a5c5f;
+}
+.col-md-9{
+  width: 85%;
+  /* margin-top: 35px; */
+}
+.col-md-3{
+  width: 15%;
+  /* margin-top: 35px; */
+}
+#myTurn{
+  /* padding: 25px 30px; */
+  background-color: #5a5c5f;
+  /*border-radius: 7px;*/
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  /* margin: 0 20px; */
+  font-size: 14px;
+}
+#displayQuestionBox{
+  /* padding: 25px 30px; */
+  background-color: #5a5c5f;
+  /*border-radius: 7px;*/
+  box-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  /* margin: 0 20px; */
 
   /*横並び*/
   display: flex;
   flex-wrap: wrap;
 }
-.col-md-9{
-  width: 66%;
-  margin-top: 35px;
-}
-.col-md-3{
-  width: 33%;
-  margin-top: 35px;
-}
-.myTurn{
-  padding: 25px 30px;
-  background-color: #000000;
-  border-radius: 7px;
+#myHand{
+  /* padding: 25px 30px; */
+  background-color: #5a5c5f;
+  /* border-radius: 7px; */
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
-  margin: 0 20px;
-}
-.displayQuestionBox{
-  padding: 25px 30px;
-  background-color: #000000;
-  border-radius: 7px;
-  box-shadow: 1px 1px 4px #000000;
-  text-align: center;
-  margin: 0 20px;
-}
-.myHand{
-  padding: 25px 30px;
-  background-color: #000000;
-  border-radius: 7px;
-  box-shadow: 1px 1px 4px #000000;
-  text-align: center;
-  margin: 0 20px;
+  /* margin: 0 20px; */
+
+  /*横並び*/
+  display: flex;
+  flex-wrap: wrap;
 }
 .col-md-3Inner{
-  padding: 25px 30px;
-  background-color: #000000;
+  /* padding: 25px 30px; */
+  background-color: #5a5c5f;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
-  margin: 0 20px;
-}
-.myTurn{
-  font-size: 14px;
+  /* margin: 0 20px; */
+
+  /*縦並び*/
+  display: flex;
+  flex-direction: column;
 }
 .questionCard{
   font-size: 14px;
