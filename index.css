@@ -19,15 +19,15 @@
   flex-wrap: wrap;
 }
 .col-md-9{
-  width: 66%;
+  width: 85%;
   margin-top: 35px;
 }
 .col-md-3{
-  width: 33%;
+  width: 15%;
   margin-top: 35px;
 }
 .myTurn{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
@@ -35,28 +35,40 @@
   margin: 0 20px;
 }
 .displayQuestionBox{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
   margin: 0 20px;
+
+  /*横並び*/
+  display: flex;
+  flex-wrap: wrap;
 }
 .myHand{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
   margin: 0 20px;
+
+  /*横並び*/
+  display: flex;
+  flex-wrap: wrap;
 }
 .col-md-3Inner{
-  pdding: 25px 30px;
+  padding: 25px 30px;
   background-color: #000000;
   border-radius: 7px;
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
   margin: 0 20px;
+
+  /*縦並び*/
+  display: flex;
+  flex-direction: column;
 }
 .myTurn{
   font-size: 14px;
