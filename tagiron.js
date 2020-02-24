@@ -24,11 +24,11 @@ const question = ["赤の数の合計は？", "5はどこ？", "青の数字タ�
 let ans = []; //回答格納
 const displayQuestionBox = document.getElementById('displayQuestionBox');
 const myHand = document.getElementById('myHand');
+// const img = new Image();
 
 // 手札の配布
 function handOutCard() {
     let tmp = [];
-    let img = new Image();
 
     //重複ない5枚の確定
     do {
@@ -38,70 +38,109 @@ function handOutCard() {
         }
         tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
     } while (tmp.length !== 5);
-    console.log(tmp);
 
     // 手札の表示
     for (let i = 0; i < tmp.length; i++) {
         switch (tmp[i]) {
             case R0:
-                document.write("<img src='./img/R0.jpg' alt='R0'></img>");
+                let imgR0 = new Image();
+                imgR0.src = './img/R0.jpg';
+                myHand.appendChild(imgR0);
                 break;
             case R1:
-                document.write("<img src='./img/R1.jpg' alt='R1'></img>");
+                let imgR1 = new Image();
+                imgR1.src = './img/R1.jpg';
+                myHand.appendChild(imgR1);
                 break;
             case R2:
-                document.write("<img src='./img/R2.jpg' alt='R2'></img>");
+                let imgR2 = new Image();
+                imgR2.src = './img/R2.jpg';
+                myHand.appendChild(imgR2);
                 break;
             case R3:
-                document.write("<img src='./img/R3.jpg' alt='R3'></img>");
+                let imgR3 = new Image();
+                imgR3.src = './img/R3.jpg';
+                myHand.appendChild(imgR3);
                 break;
             case R4:
-                document.write("<img src='./img/R4.jpg' alt='R4'></img>");
+                let imgR4 = new Image();
+                imgR4.src = './img/R4.jpg';
+                myHand.appendChild(imgR4);
                 break;
             case R6:
-                document.write("<img src='./img/R6.jpg' alt='R6'></img>");
+                let imgR6 = new Image();
+                imgR6.src = './img/R6.jpg';
+                myHand.appendChild(imgR6);
                 break;
             case R7:
-                document.write("<img src='./img/R7.jpg' alt='R7'></img>");
+                let imgR7 = new Image();
+                imgR7.src = './img/R7.jpg';
+                myHand.appendChild(imgR7);
                 break;
             case R8:
-                document.write("<img src='./img/R8.jpg' alt='R8'></img>");
+                let imgR8 = new Image();
+                imgR8.src = './img/R8.jpg';
+                myHand.appendChild(imgR8);
                 break;
             case R9:
-                document.write("<img src='./img/R9.jpg' alt='R9'></img>");
+                let imgR9 = new Image();
+                imgR9.src = './img/R9.jpg';
+                myHand.appendChild(imgR9);
                 break;
             case B0:
-                document.write("<img src='./img/B0.jpg' alt='B0'></img>");
+                let imgB0 = new Image();
+                imgB0.src = './img/B0.jpg';
+                myHand.appendChild(imgB0);
                 break;
             case B1:
-                document.write("<img src='./img/B1.jpg' alt='B1'></img>");
+                let imgB1 = new Image();
+                imgB1.src = './img/B1.jpg';
+                myHand.appendChild(imgB1);
                 break;
             case B2:
-                document.write("<img src='./img/B2.jpg' alt='B2'></img>");
+                let imgB2 = new Image();
+                imgB2.src = './img/B2.jpg';
+                myHand.appendChild(imgB2);
                 break;
             case B3:
-                document.write("<img src='./img/B3.jpg' alt='B3'></img>");
+                let imgB3 = new Image();
+                imgB3.src = './img/B3.jpg';
+                myHand.appendChild(imgB3);
                 break;
             case B4:
-                document.write("<img src='./img/B4.jpg' alt='B4'></img>");
+                let imgB4 = new Image();
+                imgB4.src = './img/B4.jpg';
+                myHand.appendChild(imgB4);
                 break;
             case B6:
-                document.write("<img src='./img/B6.jpg' alt='B6'></img>");
+                let imgB6 = new Image();
+                imgB6.src = './img/B6.jpg';
+                myHand.appendChild(imgB6);
                 break;
             case B7:
-                document.write("<img src='./img/B7.jpg' alt='B7'></img>");
+                let imgB7 = new Image();
+                imgB7.src = './img/B7.jpg';
+                myHand.appendChild(imgB7);
                 break;
             case B8:
-                document.write("<img src='./img/B8.jpg' alt='B8'></img>");
+                let imgB8 = new Image();
+                imgB8.src = './img/B8.jpg';
+                myHand.appendChild(imgB8);
                 break;
             case B9:
-                document.write("<img src='./img/B9.jpg' alt='B9'></img>");
+                let imgB9 = new Image();
+                imgB9.src = './img/B9.jpg';
+                myHand.appendChild(imgB9);
                 break;
             case G5r:
-                document.write("<img src='./img/G5.jpg' alt='G5'></img>");
+                let imgG5r = new Image();
+                imgG5r.src = './img/G5.jpg';
+                myHand.appendChild(imgG5r);
                 break;
             case G5b:
-                document.write("<img src='./img/G5.jpg' alt='G5'></img>");
+                let imgG5b = new Image();
+                imgG5b.src = './img/G5.jpg';
+                myHand.appendChild(imgG5b);
                 break;
             default:
                 break;
@@ -142,4 +181,5 @@ function answerJudgment() {
 }
 
 window.addEventListener('DOMContentLoaded', displayQuestion);
-handOutCard();
+window.addEventListener('load', handOutCard);
+// handOutCard();
