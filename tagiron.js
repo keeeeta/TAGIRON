@@ -199,15 +199,14 @@ function answerJudgment() {
         }
     }
     alert(tmp);
-    for (let m = 0; m < numberTileList.length; m++) {
-        if (tmp.some((value) => { return value === numberTileList[m] })) {
-            ans.push(numberTileList[m]);
-        }
-    }
+    // for (let m = 0; m < numberTileList.length; m++) {
+    //     if (tmp.some((value) => { return value === numberTileList[m] })) {
+    //         ans.push(numberTileList[m]);
+    //     }
+    // }
     // alert(ans);
     // console.log(ans);
     // docment.write(ans);
-    return ans;
 
 
     // if () {
