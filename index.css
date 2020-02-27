@@ -10,9 +10,10 @@
   text-align: center;
 }
 .row{
-  /*フォント*/
   /* padding: 90px 0 60px; */
-  background-color: #ff4500;
+  background-color: #5a5c5f;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #000000;
 }
 .col-md-9{
   width: 85%;
@@ -24,20 +25,20 @@
 }
 #myTurn{
   /* padding: 25px 30px; */
+  /* margin: 0 20px; */
   background-color: #5a5c5f;
   /*border-radius: 7px;*/
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
-  /* margin: 0 20px; */
-  font-size: 14px;
+  font-size: 30px;
 }
 #displayQuestionBox{
   /* padding: 25px 30px; */
+  /* margin: 0 20px; */
   background-color: #5a5c5f;
   /*border-radius: 7px;*/
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
-  /* margin: 0 20px; */
 
   /*横並び*/
   display: flex;
@@ -45,24 +46,23 @@
 }
 #myHand{
   /* padding: 25px 30px; */
+  /* margin: 0 20px; */
   background-color: #5a5c5f;
   /* border-radius: 7px; */
   box-shadow: 1px 1px 4px #000000;
   text-align: center;
-  /* margin: 0 20px; */
 
   /*横並び*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
-.col-md-3Inner{
+#col-md-3Inner{
   /* padding: 25px 30px; */
-  background-color: #5a5c5f;
-  border-radius: 7px;
-  box-shadow: 1px 1px 4px #000000;
-  text-align: center;
   /* margin: 0 20px; */
+  background-color: #5a5c5f;
+  text-align: center;
 
   /*縦並び*/
   display: flex;
@@ -72,7 +72,6 @@
   font-size: 14px;
 }
 .numberTile{
-  font-size: 14px;
   width: 15%;
   height: 20%;
 }
