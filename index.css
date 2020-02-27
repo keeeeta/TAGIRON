@@ -38,7 +38,6 @@
   background-color: #5a5c5f;
   /*border-radius: 7px;*/
   box-shadow: 1px 1px 4px #000000;
-  text-align: center;
 
   /*横並び*/
   display: flex;
@@ -70,6 +69,8 @@
 }
 .questionCard{
   font-size: 14px;
+  text-align: center;
+
 }
 .numberTile{
   width: 15%;
