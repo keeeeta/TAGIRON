@@ -192,15 +192,22 @@ function compareFunc(a, b) {
 
 // 解答の取得、正誤判定
 function answerJudgment() {
-    let flag = false;
+    let tmp = [];
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
-            flag = true;
-            ans.push(document.answer_box.answer[i].value);
+            tmp.push(document.answer_box.answer[i].value);
         }
     }
-    ans.sort();
-    alert(ans);
+    alert(tmp);
+    // for (let m = 0; m < numberTileList.length; m++) {
+    //     if (tmp.some((value) => { return value === numberTileList[m] })) {
+    //         ans.push(numberTileList[m]);
+    //     }
+    // }
+    // alert(ans);
+    // console.log(ans);
+    // docment.write(ans);
+
 
     // if () {
     //     alert("勝利！");
@@ -210,4 +217,4 @@ function answerJudgment() {
 }
 
 window.addEventListener('DOMContentLoaded', displayQuestion);
-window.addEventListener('load', handOutCard);
+window.addEventListener('DOMContentLoaded', handOutCard);
