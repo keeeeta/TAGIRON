@@ -17,10 +17,10 @@ const B6 = { value: 6, color: "blue" };
 const B7 = { value: 7, color: "blue" };
 const B8 = { value: 8, color: "blue" };
 const B9 = { value: 9, color: "blue" };
-const G5r = { value: 5, color: "green" };
-const G5b = { value: 5, color: "green" };
-const numberTileList = [R0, B0, R1, B1, R2, B2, R3, B3, R4, B4, G5r, G5b, R6, B6, R7, B7, R8, B8, R9, B9];
+const G5 = { value: 5, color: "green" };
+const numberTileList = [R0, B0, R1, B1, R2, B2, R3, B3, R4, B4, G5, G5, R6, B6, R7, B7, R8, B8, R9, B9];
 const question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
+let hand = [];
 let ans = []; //回答格納
 const displayQuestionBox = document.getElementById('displayQuestionBox');
 const myHand = document.getElementById('myHand');
@@ -28,12 +28,12 @@ const dataLog = document.getElementById('dataLog');
 
 // 手札の配布
 function handOutCard() {
-    let hand = [];
+    let rndNum;
 
     //重複ない5枚の確定
     do {
         for (let i = 0; i < 5; i++) {
-            let rndNum = Math.floor(Math.random() * numberTileList.length);
+            rndNum = Math.floor(Math.random() * numberTileList.length);
             hand[i] = numberTileList[rndNum];
         }
         // 重複の削除
@@ -161,17 +161,11 @@ function handOutCard() {
                 imgB9.classList.add("numberTile");
                 myHand.appendChild(imgB9);
                 break;
-            case G5r:
-                let imgG5r = new Image();
-                imgG5r.src = './img/G5.jpg';
-                imgG5r.classList.add("numberTile");
-                myHand.appendChild(imgG5r);
-                break;
-            case G5b:
-                let imgG5b = new Image();
-                imgG5b.src = './img/G5.jpg';
-                imgG5b.classList.add("numberTile");
-                myHand.appendChild(imgG5b);
+            case G5:
+                let imgG5 = new Image();
+                imgG5.src = './img/G5.jpg';
+                imgG5.classList.add("numberTile");
+                myHand.appendChild(imgG5);
                 break;
             default:
                 break;
@@ -256,11 +250,8 @@ function answerJudgment() {
                 case "B9":
                     ans[ans.length] = B9;
                     break;
-                case "G5r":
-                    ans[ans.length] = G5r;
-                    break;
-                case "G5b":
-                    ans[ans.length] = G5b;
+                case "G5":
+                    ans[ans.length] = G5;
                     break;
                 default:
                     break;
@@ -273,7 +264,6 @@ function answerJudgment() {
     // object.toSource()はオブジェクトが展開された形で表示出来る。chromeの場合はJSON.stringify(object)。
     alert(JSON.stringify(ans));
 
-    // 全然うまくいってない
     for (let l = 0; l < hand.length; l++) {
         if (hand[l].value == ans[l].value && hand[l].color == ans[l].color) {
             m++;
