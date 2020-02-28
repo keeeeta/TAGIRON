@@ -187,7 +187,11 @@ function displayQuestion() {
 
 // 数値sort用比較関数
 function compareFunc(a, b) {
-    return a.value < b.value ? -1 : 1;
+    if (a == b) {
+        return a.color < b.color ? -1 : 1;
+    } else {
+        return a.value < b.value ? -1 : 1;
+    }
 }
 
 
