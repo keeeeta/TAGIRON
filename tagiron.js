@@ -197,6 +197,7 @@ function compareFunc(a, b) {
 
 // 解答の取得、正誤判定
 function answerJudgment() {
+    let m = 0;
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
             // ans.push(document.answer_box.answer[i].value);
@@ -272,12 +273,21 @@ function answerJudgment() {
     // object.toSource()はオブジェクトが展開された形で表示出来る。chromeの場合はJSON.stringify(object)。
     alert(JSON.stringify(ans));
 
-    // if () {
-    //     alert("勝利！");
-    // } else {
-    //     alert("不正解");
-    // }
+    // 全然うまくいってない
+    for (let l = 0; l < hand.length; l++) {
+        if (hand[l].value == ans[l].value && hand[l].color == ans[l].color) {
+            m++;
+        } else {
+            break;
+        }
+    }
+
+    if (m == 5) {
+        document.write("勝利！");
+    } else {
+        document.write("不正解");
+    }
 }
 
 window.addEventListener('DOMContentLoaded', displayQuestion);
-window.addEventListener('DOMContentLoaded', handOutCard);
+// window.addEventListener('DOMContentLoaded', handOutCard);
