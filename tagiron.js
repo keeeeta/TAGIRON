@@ -42,7 +42,6 @@ function handOutCard() {
 
     // 並べ替え
     hand.sort(compareFunc);
-    console.log(hand);
 
     // 並べ替え
     // for (let m = 0; m < numberTileList.length; m++) {
@@ -189,7 +188,7 @@ function displayQuestion() {
 // 数値sort用比較関数
 function compareFunc(a, b) {
     if (a.value == b.value) {
-        return a.color > b.color ? -1 : 1;
+        return a.color < b.color ? 1 : -1;
     } else {
         return a.value < b.value ? -1 : 1;
     }
