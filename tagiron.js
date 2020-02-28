@@ -24,6 +24,7 @@ const question = ["赤の数の合計は？", "5はどこ？", "青の数字タ�
 let ans = []; //回答格納
 const displayQuestionBox = document.getElementById('displayQuestionBox');
 const myHand = document.getElementById('myHand');
+const dataLog = document.getElementById('dataLog');
 
 // 手札の配布
 function handOutCard() {
