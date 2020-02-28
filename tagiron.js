@@ -188,8 +188,8 @@ function displayQuestion() {
 
 // 数値sort用比較関数
 function compareFunc(a, b) {
-    if (a == b) {
-        return a.color < b.color ? -1 : 1;
+    if (a.value == b.value) {
+        return a.color > b.color ? -1 : 1;
     } else {
         return a.value < b.value ? -1 : 1;
     }
@@ -199,14 +199,15 @@ function compareFunc(a, b) {
 // 解答の取得、正誤判定
 function answerJudgment() {
     let tmp = [];
-    let ans = [];
+    let ans;
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
             // tmp.push(document.answer_box.answer[i].value);
             switch (document.answer_box.answer[i].value) {
                 case "R0":
                     ans.push(R0);
-                    document.write("swithは成功");
+                    document.write(ans);
+                    document.write("成功");
                     break;
                 case "R1":
                     ans.push(numberTileList[1]);
