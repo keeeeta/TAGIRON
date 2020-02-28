@@ -197,73 +197,69 @@ function compareFunc(a, b) {
 
 // 解答の取得、正誤判定
 function answerJudgment() {
-    let tmp = [];
-    let ans;
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
-            // tmp.push(document.answer_box.answer[i].value);
+            // ans.push(document.answer_box.answer[i].value);
             switch (document.answer_box.answer[i].value) {
                 case "R0":
-                    ans.push(R0);
-                    document.write(ans);
-                    document.write("成功");
+                    ans[ans.length] = R0;
                     break;
                 case "R1":
-                    ans.push(numberTileList[1]);
+                    ans[ans.length] = R1;
                     break;
                 case "R2":
-                    ans.push(numberTileList[2]);
+                    ans[ans.length] = R2;
                     break;
                 case "R3":
-                    ans.push(numberTileList[3]);
+                    ans[ans.length] = R3;
                     break;
                 case "R4":
-                    ans.push(numberTileList[4]);
+                    ans[ans.length] = R4;
                     break;
                 case "R6":
-                    ans.push(numberTileList[5]);
+                    ans[ans.length] = R6;
                     break;
                 case "R7":
-                    ans.push(numberTileList[6]);
+                    ans[ans.length] = R7;
                     break;
                 case "R8":
-                    ans.push(numberTileList[7]);
+                    ans[ans.length] = R8;
                     break;
                 case "R9":
-                    ans.push(numberTileList[8]);
+                    ans[ans.length] = R9;
                     break;
                 case "B0":
-                    ans.push(numberTileList[9]);
+                    ans[ans.length] = B0;
                     break;
                 case "B1":
-                    ans.push(numberTileList[10]);
+                    ans[ans.length] = B1;
                     break;
                 case "B2":
-                    ans.push(numberTileList[11]);
+                    ans[ans.length] = B2;
                     break;
                 case "B3":
-                    ans.push(numberTileList[12]);
+                    ans[ans.length] = B3;
                     break;
                 case "B4":
-                    ans.push(numberTileList[13]);
+                    ans[ans.length] = B4;
                     break;
                 case "B6":
-                    ans.push(numberTileList[14]);
+                    ans[ans.length] = B6;
                     break;
                 case "B7":
-                    ans.push(numberTileList[15]);
+                    ans[ans.length] = B7;
                     break;
                 case "B8":
-                    ans.push(numberTileList[16]);
+                    ans[ans.length] = B8;
                     break;
                 case "B9":
-                    ans.push(numberTileList[17]);
+                    ans[ans.length] = B9;
                     break;
                 case "G5r":
-                    ans.push(numberTileList[18]);
+                    ans[ans.length] = G5r;
                     break;
                 case "G5b":
-                    ans.push(numberTileList[19]);
+                    ans[ans.length] = G5b;
                     break;
                 default:
                     break;
@@ -271,15 +267,10 @@ function answerJudgment() {
         }
     }
 
-    // tmp.sort();
-    // 並び替え(不成功)
-    // for (let m = 0; m < numberTileList.length; m++) {
-    //     if (tmp.some((value) => { return value === numberTileList[m] })) {
-    //         ans.push(numberTileList[m]);
-    //     }
-    // }
-    alert(tmp);
-    document.write(tmp);
+    ans.sort(compareFunc);
+
+    // object.toSource()はオブジェクトが展開された形で表示出来る。chromeの場合はJSON.stringify(object)。
+    alert(JSON.stringify(ans));
 
     // if () {
     //     alert("勝利！");
