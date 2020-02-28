@@ -28,27 +28,28 @@ const dataLog = document.getElementById('dataLog');
 
 // 手札の配布
 function handOutCard() {
-    let tmp = [];
     let hand = [];
 
     //重複ない5枚の確定
     do {
         for (let i = 0; i < 5; i++) {
             let rndNum = Math.floor(Math.random() * numberTileList.length);
-            tmp[i] = numberTileList[rndNum];
+            hand[i] = numberTileList[rndNum];
         }
         // 重複の削除
-        tmp = tmp.filter((x, i, self) => self.indexOf(x) === i);
-    } while (tmp.length !== 5);
-    console.log(tmp);
+        hand = hand.filter((x, i, self) => self.indexOf(x) === i);
+    } while (hand.length !== 5);
 
-    //並べ替え
-    for (let m = 0; m < numberTileList.length; m++) {
-        if (tmp.some((value) => { return value === numberTileList[m] })) {
-            hand.push(numberTileList[m]);
-        }
-    }
+    // 並べ替え
+    hand.sort(compareFunc);
     console.log(hand);
+
+    // 並べ替え
+    // for (let m = 0; m < numberTileList.length; m++) {
+    //     if (tmp.some((value) => { return value === numberTileList[m] })) {
+    //         hand.push(numberTileList[m]);
+    //     }
+    // }
 
     // 手札の表示
     for (let i = 0; i < hand.length; i++) {
@@ -176,7 +177,6 @@ function handOutCard() {
             default:
                 break;
         }
-
     }
 }
 
@@ -186,29 +186,100 @@ function displayQuestion() {
     document.getElementById('questionCard').textContent = question[rndNum];
 }
 
+// 数値sort用比較関数
 function compareFunc(a, b) {
-
+    if (a == b) {
+        return a.color < b.color ? -1 : 1;
+    } else {
+        return a.value < b.value ? -1 : 1;
+    }
 }
 
 
 // 解答の取得、正誤判定
 function answerJudgment() {
     let tmp = [];
+    let ans = [];
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
-            tmp.push(document.answer_box.answer[i].value);
+            // tmp.push(document.answer_box.answer[i].value);
+            switch (document.answer_box.answer[i].value) {
+                case "R0":
+                    ans.push(R0);
+                    document.write("swithは成功");
+                    break;
+                case "R1":
+                    ans.push(numberTileList[1]);
+                    break;
+                case "R2":
+                    ans.push(numberTileList[2]);
+                    break;
+                case "R3":
+                    ans.push(numberTileList[3]);
+                    break;
+                case "R4":
+                    ans.push(numberTileList[4]);
+                    break;
+                case "R6":
+                    ans.push(numberTileList[5]);
+                    break;
+                case "R7":
+                    ans.push(numberTileList[6]);
+                    break;
+                case "R8":
+                    ans.push(numberTileList[7]);
+                    break;
+                case "R9":
+                    ans.push(numberTileList[8]);
+                    break;
+                case "B0":
+                    ans.push(numberTileList[9]);
+                    break;
+                case "B1":
+                    ans.push(numberTileList[10]);
+                    break;
+                case "B2":
+                    ans.push(numberTileList[11]);
+                    break;
+                case "B3":
+                    ans.push(numberTileList[12]);
+                    break;
+                case "B4":
+                    ans.push(numberTileList[13]);
+                    break;
+                case "B6":
+                    ans.push(numberTileList[14]);
+                    break;
+                case "B7":
+                    ans.push(numberTileList[15]);
+                    break;
+                case "B8":
+                    ans.push(numberTileList[16]);
+                    break;
+                case "B9":
+                    ans.push(numberTileList[17]);
+                    break;
+                case "G5r":
+                    ans.push(numberTileList[18]);
+                    break;
+                case "G5b":
+                    ans.push(numberTileList[19]);
+                    break;
+                default:
+                    break;
+            }
         }
     }
-    alert(tmp);
+
+    // tmp.sort();
+    // 並び替え(不成功)
     // for (let m = 0; m < numberTileList.length; m++) {
     //     if (tmp.some((value) => { return value === numberTileList[m] })) {
     //         ans.push(numberTileList[m]);
     //     }
     // }
-    // alert(ans);
-    // console.log(ans);
-    // docment.write(ans);
-
+    alert(tmp);
+    document.write(tmp);
 
     // if () {
     //     alert("勝利！");
