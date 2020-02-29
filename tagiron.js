@@ -267,7 +267,7 @@ function answerJudgment() {
     ans.sort(compareFunc);
 
     // object.toSource()はオブジェクトが展開された形で表示出来る。chromeの場合はJSON.stringify(object)。
-    alert(JSON.stringify(ans));
+    // alert(JSON.stringify(ans));
 
     // 正誤判定
     for (let l = 0; l < hand.length; l++) {
@@ -280,9 +280,9 @@ function answerJudgment() {
 
     // 勝利通知
     if (count == 5) {
-        document.write("勝利！");
+        document.write("<h1>勝利！</h1>");
     } else {
-        document.write("不正解");
+        document.write("<h1>不正解</h1>");
     }
 }
 
