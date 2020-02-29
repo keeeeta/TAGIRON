@@ -21,18 +21,19 @@ const G5 = { value: 5, color: "green" };
 const numberTileList = [R0, B0, R1, B1, R2, B2, R3, B3, R4, B4, G5, G5, R6, B6, R7, B7, R8, B8, R9, B9];
 const question = ["赤の数の合計は？", "5はどこ？", "青の数字タイルは何枚ある？"];
 let hand = [];
-let ans = []; //回答格納
+let ans = []; // 回答格納
 const displayQuestionBox = document.getElementById('displayQuestionBox');
 const myHand = document.getElementById('myHand');
 const dataLog = document.getElementById('dataLog');
 
 // 手札の配布
 function handOutCard() {
-    let rndNum;
+    let rndNum; // ランダム数
 
     //重複ない5枚の確定
     do {
         for (let i = 0; i < 5; i++) {
+            // Math.random()は0以上、1未満。Math.floorは引数として与えた数以下の最大の整数(正の数なら切り捨て)。
             rndNum = Math.floor(Math.random() * numberTileList.length);
             hand[i] = numberTileList[rndNum];
         }
@@ -182,8 +183,10 @@ function displayQuestion() {
 // 数値sort用比較関数
 function compareFunc(a, b) {
     if (a.value == b.value) {
+        //  同じ数字ならred,blueの順なので降順
         return a.color < b.color ? 1 : -1;
     } else {
+        // 昇順に並び替え
         return a.value < b.value ? -1 : 1;
     }
 }
@@ -191,7 +194,9 @@ function compareFunc(a, b) {
 
 // 解答の取得、正誤判定
 function answerJudgment() {
-    let m = 0;
+    let count = 0; // 解答と答えのあっているかのカウント
+
+    // 回答を配列(ans)に格納
     for (let i = 0; i < document.answer_box.answer.length; i++) {
         if (document.answer_box.answer[i].checked) {
             // ans.push(document.answer_box.answer[i].value);
@@ -264,15 +269,17 @@ function answerJudgment() {
     // object.toSource()はオブジェクトが展開された形で表示出来る。chromeの場合はJSON.stringify(object)。
     alert(JSON.stringify(ans));
 
+    // 正誤判定
     for (let l = 0; l < hand.length; l++) {
         if (hand[l].value == ans[l].value && hand[l].color == ans[l].color) {
-            m++;
+            count++;
         } else {
             break;
         }
     }
 
-    if (m == 5) {
+    // 勝利通知
+    if (count == 5) {
         document.write("勝利！");
     } else {
         document.write("不正解");
